@@ -1,15 +1,17 @@
-# Vite + Pug + Tailwind 4 Ön Yüz Başlangıç Kiti
 
-Kaynak: https://github.com/danyalll1/Vite-Pug-boilerplate/tree/main
+# 🎯 Zeplin Creative UI Challenge
 
-Vite 7, Vituum (Pug yönlendirme), Tailwind CSS 4 ve üretim sonrası (postbuild) optimizasyon adımlarıyla çoklu sayfa (MPA) bir ön yüz geliştirme ortamı. İsteğe bağlı WordPress moduyla tema klasör yapısına uygun asset çıktısı üretir.
+Bu proje, Zeplin Creative UI Challenge kapsamında hazırlanmış bir frontend uygulamasıdır. Amaç; Zeplin üzerinden sağlanan tasarımları modern bir geliştirme altyapısı kullanarak, gerçek dünya senaryolarına uygun, temiz, sürdürülebilir ve ölçeklenebilir bir yapıya dönüştürmektir.
 
-## Özellikler
-- **Vite geliştirme sunucusu** ve Vituum `pages` eklentisi ile `src/pug/pages` altında çoklu sayfa desteği.
-- **Tailwind CSS 4** (`@tailwindcss/postcss`) ve `src/styles/app.css` içinde tema değişkenleri.
-- **Görsel optimizasyonu**: `@vheemstra/vite-plugin-imagemin` ile JPG/PNG sıkıştırma ve WebP üretimi.
-- **Postbuild adımı**: `dist/` içindeki HTML’leri klasör bazlı temiz URL’lere dönüştürür ve görsel referanslarını WebP’ye çevirir.
-- **WordPress modu**: `vite.config.js` içindeki ayara göre asset’leri `/wp-content/themes/<projectName>/assets/...` altına konumlandırır.
+Çalışma boyunca:
+	•	Tasarıma sadık kalınarak bileşen bazlı bir yapı kuruldu.
+	•	Tekrar kullanılabilir Pug mixin’leri ve component’ler üretildi.
+	•	Tailwind CSS ile okunabilir, sürdürülebilir ve responsive bir stil sistemi oluşturuldu.
+	•	Gerçek müşteri teslimi senaryosu düşünülerek hem WordPress entegrasyonuna hem de statik HTML çıktısına uygun bir yapı hedeflendi.
+
+Bu proje, sadece bir tasarım çevirisi değil; aynı zamanda gerçek hayatta karşılaşılabilecek build, deploy ve bakım süreçlerini de kapsayan bütüncül bir frontend çözümü olarak ele alındı.
+
+
 
 ## Gereksinimler
 - Node.js 18+
