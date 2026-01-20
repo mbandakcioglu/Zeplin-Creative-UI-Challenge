@@ -1,0 +1,29 @@
+body {
+	background-color: #fff;
+	color: var(--color-primary);
+	font-family: var(--font-primary);
+	font-size: 18px;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+}
+.container-fluid {
+	width: 100%;
+}
+
+header.header {
+    /* max-width: 1025px; */
+    svg {
+        height: auto;
+        width: 100% !important;
+    }
+    .header__menu {
+        display: flex;
+        gap: 20px;
+    }
+}

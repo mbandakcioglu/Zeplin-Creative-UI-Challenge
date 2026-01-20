@@ -1,0 +1,28 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import "tailwindcss";
+
+@theme {
+	--color-primary: #2A2C31;
+	--color-secondary: #273D89;
+	--color-alternative: rgb(19, 120, 134);
+    --color-blue: #273d89;
+    --color-green: #a8b95e;
+    --color-red: #db0d15;
+	
+	--color-background-site: rgb(249, 249, 249);
+	--color-background-code: rgb(244, 244, 244);
+	
+    --font-primary: 'Inter', sans-serif;
+
+}
+
+@import "./../../node_modules/swiper/swiper.css";
+@import "./global.css";
+
+
+
+
+

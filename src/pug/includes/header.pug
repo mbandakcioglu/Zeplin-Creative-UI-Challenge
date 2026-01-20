@@ -1,0 +1,101 @@
+header.header(class="xl:shadow-[inset_0_44px_0_0_#112053]")
+	.container-fluid(class="xl:h-33.75 flex w-full justify-between items-center")
+		.header-logo(
+			class=`flex justify-center items-center xl:w-95.25 w-1/2 xl:h-33.75 h-17.5 xl:pl-8 xl:pr-16.5 px-4 xl:mr-5 xl:rounded-tr-[100px] bg-[#273d89] border xl:border-black xl:shadow-[21px_-21px_0_0_#ffffff] shadow-0` 
+		)
+			a(href="javascript:;") 
+				img(class="w-full object-cover", src=images + "/header/logo.svg", alt="")
+		div(class="flex flex-col w-full") 
+			.header-top(class="hidden h-11 xl:flex items-center justify-between text-white text-[17px]")
+				a.header__item(class="leading-7 mr-auto flex gap-[14px]", href="mailto:profuture@gmail.com") 
+					img(src= images + "/icons/icon-mail.svg", alt="") 
+					| profuture@gmail.com
+
+				div(class="flex ml-auto pr-[63px] gap-5") 
+					span ISSN: 
+						strong 345-255
+					span Başlangıç 
+						strong 2025
+					span Periyot: 
+						strong Yılda 2 Sayı
+				
+			nav(
+				id="main-nav" 
+				class="absolute xl:static z-40 hidden flex xl:flex flex-col xl:flex-row items-center justify-center xl:justify-end left-0 top-0 w-screen xl:w-full h-full xl:h-[91px] pr-0 xl:pr-16.5 xl:space-x-1.25 gap-y-2.5 text-center bg-white header-nav transition-all duration-300 ease-out opacity-0 translate-x-5 xl:opacity-100 xl:translate-x-0"
+			)
+				//- mobile menu closer
+				a(id="mobile-menu-closer", href="javascript:;", class="absolute top-5 right-5 xl:hidden")
+					img(src= images + "/icons/icon-error.svg", alt="") 
+				
+				a(href="javascript:;", class="xl:mr-auto")
+					img(src=images + "/icons/icon-home.svg", alt="")
+				ul(class="flex flex-col xl:flex-row gap-[25px] mr-[25px] [&>li>a]:py-0.5 [&>li>a]:transition-shadow [&>li>a]:duration-300 [&>li>a]:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.3)] lg:text-[14px] 2xl:text-[18px]")
+					li 
+						a.header__item(class="", href="/") Amaç ve Kapsam
+					li 
+						a.header__item(class="", href="javascript:;") Etik İlkeler ve Yayın Politikası
+					li 
+						a.header__item(class="", href="javascript:;") Makale Çağrıları
+					li 
+						a.header__item(class="", href="javascript:;") Sayılar
+					li 
+						a.header__item(class="", href="javascript:;") İletişim
+				
+				+buttonGeneral("Dergi Kurulu", {
+					href: "javascript:;",
+					variant: "blue",
+					icon: `<svg
+						width="25"
+						height="22"
+						viewBox="0 0 25 22"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						class="fill-white group-hover:fill-blue flex-grow-0 flex-shrink-0 w-[25px] h-[22px] relative"
+						preserveAspectRatio="none"
+						>
+						<g clip-path="url(#clip0_6569_86)">
+							<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							class="fill-white group-hover:fill-blue"
+							d="M15.7222 14.465C16.4074 13.7042 16.8241 12.705 16.8241 11.6142C16.8241 9.25833 14.8889 7.33333 12.5 7.33333C10.1111 7.33333 8.17594 9.24916 8.17594 11.6142C8.17594 12.705 8.59261 13.7133 9.27779 14.465C7.86113 15.4642 6.94446 17.0958 6.94446 18.9475V19.5617C6.94446 20.9092 8.05557 22.0092 9.41668 22.0092H15.5926C16.9537 22.0092 18.0648 20.9092 18.0648 19.5617V18.9475C18.0648 17.105 17.1389 15.4642 15.7315 14.465H15.7222ZM12.5 9.78083C13.5185 9.78083 14.3519 10.6058 14.3519 11.6142C14.3519 12.6225 13.5185 13.4475 12.5 13.4475C11.4815 13.4475 10.6482 12.6225 10.6482 11.6142C10.6482 10.6058 11.4815 9.78083 12.5 9.78083ZM15.5833 19.5525H9.40742V18.9383C9.40742 17.2517 10.7871 15.8858 12.4908 15.8858C14.1945 15.8858 15.5741 17.2608 15.5741 18.9383V19.5525H15.5833Z"
+							></path>
+
+							<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							class="fill-white group-hover:fill-blue"
+							d="M7.63889 13.0992C7.48148 12.5767 7.01852 12.2192 6.47222 12.2192H2.47222V11.7333C2.47222 10.2208 3.52778 8.84583 5.03704 8.59833C5.85185 8.47 6.61111 8.65333 7.23148 9.0475C7.58333 9.27667 8.0463 9.14833 8.27778 8.8C8.58333 8.36 8.9537 7.95667 9.37963 7.63583C9.19444 7.4525 8.99074 7.2875 8.77778 7.13167C9.46296 6.37083 9.87963 5.37167 9.87963 4.28083C9.87963 1.91583 7.93518 0 5.55556 0C3.17593 0 1.23148 1.91583 1.23148 4.28083C1.23148 5.37167 1.64815 6.37083 2.33333 7.13167C0.925926 8.13083 0 9.7625 0 11.6142V12.2192C0 13.5667 1.11111 14.6667 2.47222 14.6667H6.47222C7.2963 14.6667 7.87963 13.8783 7.63889 13.0992ZM5.55556 2.4475C6.57407 2.4475 7.40741 3.26333 7.40741 4.28083C7.40741 5.29833 6.57407 6.11417 5.55556 6.11417C4.53704 6.11417 3.7037 5.28917 3.7037 4.28083C3.7037 3.2725 4.53704 2.4475 5.55556 2.4475Z"
+							></path>
+
+							<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							class="fill-white group-hover:fill-blue"
+							d="M22.6667 7.13167C23.3518 6.37083 23.7685 5.37167 23.7685 4.28083C23.7685 1.91583 21.8241 0 19.4444 0C17.0648 0 15.1204 1.91583 15.1204 4.28083C15.1204 5.37167 15.537 6.37083 16.2222 7.13167C16.0093 7.2875 15.8055 7.4525 15.6204 7.63583C16.0463 7.96583 16.4167 8.36 16.7222 8.8C16.9537 9.14833 17.4167 9.27667 17.7685 9.0475C18.3796 8.65333 19.1481 8.46083 19.9537 8.59833C21.463 8.84583 22.5185 10.2208 22.5185 11.7333V12.2192H18.5278C17.9815 12.2192 17.5185 12.5767 17.3611 13.09V13.1175C17.1111 13.8875 17.6944 14.6667 18.5 14.6667H22.5185C23.8796 14.6667 24.9907 13.5667 24.9907 12.2192V11.6142C24.9907 9.7625 24.0648 8.13083 22.6574 7.13167H22.6667ZM19.4444 6.11417C18.4259 6.11417 17.5926 5.28917 17.5926 4.28083C17.5926 3.2725 18.4259 2.4475 19.4444 2.4475C20.463 2.4475 21.2963 3.26333 21.2963 4.28083C21.2963 5.29833 20.463 6.11417 19.4444 6.11417Z"
+							></path>
+						</g>
+
+						<defs>
+							<clipPath id="clip0_6569_86">
+								<rect width="25" height="22" fill="white"></rect>
+							</clipPath>
+						</defs>
+						</svg>`
+				})
+				+buttonGeneral("Yazar Rehberi", {
+					href: "javascript:;",
+					variant: "green",
+					icon: `<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="fill-white group-hover:fill-green "><path d="M19.5176 6.72315L21.1211 5.11963C21.6875 4.55322 22 3.79981 22 2.99854C22 2.19727 21.6875 1.44385 21.1211 0.877442C19.9512 -0.29248 18.0488 -0.29248 16.8789 0.877442L11.7574 5.99854H5C2.24316 5.99854 0 8.2417 0 10.9985V14.9985C0 17.7554 2.24316 19.9985 5 19.9985H17C19.7568 19.9985 22 17.7554 22 14.9985V10.9985C22 9.1662 20.9941 7.58832 19.5176 6.72315ZM18.293 2.29151C18.4883 2.09668 18.7441 1.99903 19 1.99903C19.2559 1.99903 19.5117 2.09668 19.707 2.29199C19.8965 2.48047 20 2.73145 20 2.99854C20 3.26563 19.8965 3.5166 19.707 3.70508L14.0186 9.39356C13.8633 9.54932 13.6582 9.6499 13.4395 9.67822L12.1562 9.84229L12.3213 8.55762C12.3486 8.34033 12.4492 8.13477 12.6055 7.97901L18.293 2.29151ZM20 14.9985C20 16.6528 18.6543 17.9985 17 17.9985H5C3.3457 17.9985 2 16.6528 2 14.9985V10.9985C2 9.34424 3.3457 7.99854 5 7.99854H10.4022C10.3781 8.10028 10.3501 8.20117 10.3369 8.30518L10.0078 10.8716C9.96875 11.1787 10.0742 11.4868 10.293 11.7056C10.4814 11.8945 10.7363 11.9985 11 11.9985C11.042 11.9985 11.085 11.9961 11.127 11.9902L13.6934 11.6616C14.3486 11.5781 14.9668 11.2744 15.4336 10.8071L18.0328 8.20795C19.176 8.62915 20 9.71027 20 10.9985L20 14.9985ZM17 14.9985C17 15.5508 16.5527 15.9985 16 15.9985H6C5.44727 15.9985 5 15.5508 5 14.9985C5 14.4463 5.44727 13.9985 6 13.9985H16C16.5527 13.9985 17 14.4463 17 14.9985ZM5 10.9985C5 10.4463 5.44727 9.99854 6 9.99854H7C7.55273 9.99854 8 10.4463 8 10.9985C8 11.5508 7.55273 11.9985 7 11.9985H6C5.44727 11.9985 5 11.5508 5 10.9985Z"></path></svg>`
+				})
+				+buttonGeneral("", {
+					href: "javascript:;",
+					variant: "white",
+					icon: `<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-black group-hover:fill-white flex-grow-0 flex-shrink-0 w-[17px] h-[17px] relative" preserveAspectRatio="xMidYMid meet"><path d="M7.55566 0C11.7285 2.40027e-05 15.1113 3.46236 15.1113 7.7334C15.1113 9.41786 14.5827 10.975 13.6895 12.2451L16.7236 15.3496C17.0923 15.7271 17.0923 16.3393 16.7236 16.7168C16.3549 17.0943 15.7565 17.0942 15.3877 16.7168L12.4033 13.6631C11.0911 14.7882 9.40133 15.4668 7.55566 15.4668C3.38281 15.4668 0 12.0045 0 7.7334C7.09992e-05 3.46235 3.38285 0 7.55566 0ZM7.55566 1.93359C4.42607 1.93359 1.88874 4.53013 1.88867 7.7334C1.88867 10.9367 4.42602 13.5332 7.55566 13.5332C10.6853 13.5332 13.2227 10.9367 13.2227 7.7334C13.2226 4.53014 10.6852 1.93362 7.55566 1.93359Z"></path></svg>`,
+					extraClass: "rounded-full w-auto aspect-square hvr-fade !px-0 justify-center"
+				})
+			
+			//- mobile menu opener
+			a(id="mobile-menu-opener", href="javascript:;", class="xl:hidden inline-block px-4 w-max self-end")
+				img(src= images + "/icons/menu.svg", alt="") 		
+				

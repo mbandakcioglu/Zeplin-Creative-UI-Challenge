@@ -1,0 +1,16 @@
+//- variables
+block variables
+
+doctype html
+html(lang="tr")
+	head
+		include ../includes/head
+		link(rel="stylesheet" href="/src/styles/app.css")
+		script(type='module' src="/src/scripts/app.js")
+	body.theme-light(class="flex flex-col h-screen")
+
+		include  ../includes/header
+		main.main(class="")
+			block content
+		include ../includes/footer
+

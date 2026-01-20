@@ -1,0 +1,27 @@
+extends  ../layouts/layout
+
+block variables
+	-var pageType = "header-dark-mobile"
+	-var pageTitle = "Accept Payments"
+	//- SEO
+	-var desc = "Accept Payments"
+	-var keywords = "Home,Page"
+	-var pageRole = "home"
+
+block content
+	link(rel="stylesheet", href="src/styles/standalone-example.css")
+	section
+		.container.py-5(class="max-w-[" + siteWidth + "] m-auto")
+			h1 Contact
+			form(action="")
+				div 
+					label Name
+					input(type="text") 
+				div 
+					label Surname 
+					input(type="text")
+				div 
+					button(type="submit") Yallah
+	
+	script(src="/src/scripts/standalone-example.js")
+
