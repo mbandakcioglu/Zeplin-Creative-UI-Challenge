@@ -1,10 +1,13 @@
-section(class="mb-[180px]") 
+section(class="mt-32") 
 	.container(class="flex flex-col lg:flex-row space-x-[23px]") 
-		.last-magazine(class="flex flex-col justify-start items-center max-w-[466px] gap-2.5 px-[19px] py-3.5  rounded-[25px] bg-white border-[5px] border-[#ffd9da]")
+		.last-magazine(class="relative flex flex-col justify-start items-center lg:min-w-[466px] h-max xl:h-auto gap-2.5 px-[10px] py-3.5  rounded-[25px] bg-white border-[5px] border-[#ffd9da]")
+			div(class="absolute -left-[28px] top-1/2 -translate-y-1/2 flex justify-center items-center w-[98px] h-[41px] gap-2.5 px-[27px] py-[15px] rounded-tl-[25px] rounded-tr-[25px] bg-[#db0d15] rotate-90")
+				span(class="flex-grow-0 flex-shrink-0 text-base font-bold text-justify text-white ") Son Sayı 
 			div
+
 				figure 
 					img(src="/src/images/image-1.png", alt="")
-				div(class="flex justify-center space-x-[7px]") 
+				div(class="flex justify-center mt-[25px] space-x-[7px]") 
 
 					+buttonGeneral("", {
 						href: "javascript:;", 
@@ -13,7 +16,6 @@ section(class="mb-[180px]")
 						icon: '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-black group-hover:fill-white grow-0-shrink-0 w-[18px] h-[18px] relative" preserveAspectRatio="xMidYMid meet"><path d="M16.8574 11.085C17.4858 11.0851 17.9999 11.6018 18 12.2334C18 15.4153 15.4227 18 12.2627 18H5.7373C2.57159 18 0 15.4095 0 12.2334C0.000120876 11.6018 0.514207 11.0851 1.14258 11.085C1.77108 11.085 2.28601 11.6017 2.28613 12.2334C2.28613 14.146 3.83445 15.7031 5.7373 15.7031H12.2627C14.1656 15.7031 15.7139 14.146 15.7139 12.2334C15.714 11.6017 16.2289 11.085 16.8574 11.085ZM9.0166 0C9.68517 0 10.2285 0.551413 10.2285 1.21191V9.52832L13.7422 6.04199C14.2108 5.57677 15.0285 5.57677 15.4971 6.04199C15.9827 6.53015 15.9827 7.30563 15.4971 7.78809L10.0225 13.2217C9.82252 13.4341 9.58836 13.6698 9.1543 13.7617C9.08016 13.7846 9.00578 13.7842 8.93164 13.7842C8.40617 13.7842 8.02875 13.4056 7.88574 13.2676V13.2617L2.52539 7.94336C2.27968 7.70213 2.14272 7.34547 2.14844 6.99512C2.15429 6.64493 2.32026 6.30667 2.58301 6.07129C3.09717 5.62342 3.8795 5.63997 4.36523 6.12207L7.79395 9.52832V1.21191C7.79395 0.540027 8.34816 0.000161438 9.0166 0Z"></path></svg>'
 						})
 
-
 					+buttonGeneral("Görüntüle", {
 						href: "javascript:;", 
 						variant: "blue",
@@ -21,7 +23,7 @@ section(class="mb-[180px]")
 						iconPos: "right"})
 
 		.current-articles(class="w-full mt-[25px]")
-			div.current-article-header(class="flex flex-col lg:flex-row justify-between mb-11") 
+			div.current-article-header(class="lg:flex flex-col lg:flex-row justify-between mb-11") 
 				div
 					+headline("Profuture Teknoloji Dergisi", {tag: "h3", extraClass:"font-medium !text-[22px] text-[#676a73]"})
 					+headline("Güncel Yazılar", {tag: "h2", extraClass:"text-[#db0d15]"})
@@ -31,17 +33,20 @@ section(class="mb-[180px]")
 					variant: "white",
 					icon: '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-black group-hover:fill-white grow-0 shrink-0" preserveAspectRatio="xMidYMid meet"><path d="M15.9639 7.81854C15.8593 7.309 15.5836 7.03981 15.3364 6.80907L9.03257 0.425417C8.4716 -0.141806 7.56835 -0.141806 7.00738 0.425417C6.73165 0.694607 6.58903 1.05994 6.58903 1.45411C6.58903 1.83867 6.74115 2.204 7.00738 2.4828L11.0578 6.57834H1.39767C0.627526 6.57834 0 7.21286 0 8.0012C0 8.78954 0.627526 9.41445 1.39767 9.41445H11.0578L7.10245 13.4138C6.54148 13.9811 6.52247 14.8944 7.04541 15.4905C7.32114 15.7981 7.71097 15.9904 8.11981 16H8.16735C8.56668 16 8.93749 15.8462 9.22273 15.5578L15.4029 9.3087C15.5836 9.12603 16.1255 8.57804 15.9734 7.82815L15.9639 7.81854Z"></path></svg>', 
 					iconPos: "right"})
-			div.aticle-list(class="")
+			div.aticle-list(class="space-y-5")
 				each val, index in Array(4) 
-					div.article-card(class="p-[15px] mb-[11px] rounded-[20px] bg-white border-2 border-[#dfe3f1] shadow-[0_5px_15px_0_rgba(188,188,188,0.25)]")
+					div.article-card(class="p-[20px] rounded-[20px] bg-white border-2 border-[#dfe3f1] shadow-[0_5px_15px_0_rgba(188,188,188,0.25)]")
 						//- Tags
-						.tags(class="flex flex-col lg:flex-row mb-[11px] space-y-[11px] lg:space-x-[11px] lg:space-y-0")
+						.tag-list(class="flex flex-row mb-[11px] space-y-[9x] lg:space-x-[11px] lg:space-y-0")
+							
 							span(class="inline-flex justify-center items-center relative px-2.5 py-[3px] rounded-lg bg-[#273d89] text-sm text-center text-white") İklim
+							
 							span(class="inline-flex justify-center items-center relative px-2.5 py-[3px] rounded-lg bg-[#F6F8FF] text-sm text-center text-[#112053]") Araştırma Makalesi
-						.content(class="flex flex-col lg:flex-row")
+						
+						.content(class="flex flex-col xl:flex-row")
 							//- Left Content
-							.content-left(class="lg:w-3/5")
-								div(class="flex w-full mb-[11px]")
+							.content-left(class="xl:w-7/1 mb-4 xl:mb-0")
+								div(class="flex mb-[11px]")
 									svg(
 										width="22"
 										height="25"
@@ -72,7 +77,7 @@ section(class="mb-[180px]")
 											fill="#676A73")
 										
 									+headline("Türkiye’nin Teknoloji Politikaları ve Döngüsel Ekonomi", {tag: "h3", extraClass:"ml-[11px] !text-xl font-bold text-left !text-[#2a2c31]"})
-								div(class="flex flex-col lg:flex-row space-x-[25px] space-y-[25px] lg:space-y-0 w-full ") 
+								div(class="flex flex-col xl:flex-row space-x-[25px] space-y-[25px] lg:space-y-0 w-full ") 
 									div(class="flex") 
 										span(class="flex justify-center items-center size-6.5 rounded-[13px] bg-[#f0f0f3]")
 											svg(
@@ -87,7 +92,7 @@ section(class="mb-[180px]")
 													d="M10.3636 15H3.81818C3.6733 15 3.5348 14.9435 3.43253 14.8431L0.159801 11.6288C0.0575287 11.5283 0 11.392 0 11.25V3.75C0 2.86377 0.73402 2.14286 1.63636 2.14286H4.36364V0.535714C4.36364 0.239868 4.6076 0 4.90909 0H7.09091C7.3924 0 7.63636 0.239868 7.63636 0.535714V2.14286H10.3636C11.266 2.14286 12 2.86377 12 3.75V13.3929C12 14.2791 11.266 15 10.3636 15ZM4.36364 13.9286H10.3636C10.6646 13.9286 10.9091 13.6882 10.9091 13.3929V3.75C10.9091 3.45468 10.6646 3.21429 10.3636 3.21429H7.63636V4.28571C7.63636 4.58156 7.3924 4.82143 7.09091 4.82143H4.90909C4.6076 4.82143 4.36364 4.58156 4.36364 4.28571V3.21429H1.63636C1.3354 3.21429 1.09091 3.45468 1.09091 3.75V10.7143H3.27273C3.87411 10.7143 4.36364 11.1948 4.36364 11.7857V13.9286ZM1.86222 11.7857L3.27273 13.171V11.7857H1.86222ZM5.45455 3.75H6.54545V1.07143H5.45455V3.75ZM9.27273 11.25H6C5.69851 11.25 5.45455 11.0101 5.45455 10.7143C5.45455 10.4184 5.69851 10.1786 6 10.1786H9.27273C9.57422 10.1786 9.81818 10.4184 9.81818 10.7143C9.81818 11.0101 9.57422 11.25 9.27273 11.25ZM9.27273 9.10714H2.72727C2.42578 9.10714 2.18182 8.86727 2.18182 8.57143C2.18182 8.27558 2.42578 8.03571 2.72727 8.03571H9.27273C9.57422 8.03571 9.81818 8.27558 9.81818 8.57143C9.81818 8.86727 9.57422 9.10714 9.27273 9.10714ZM9.27273 6.96429H2.72727C2.42578 6.96429 2.18182 6.72442 2.18182 6.42857C2.18182 6.13273 2.42578 5.89286 2.72727 5.89286H9.27273C9.57422 5.89286 9.81818 6.13273 9.81818 6.42857C9.81818 6.72442 9.57422 6.96429 9.27273 6.96429Z"
 													fill="#2A2C31"
 												)
-										span(class="text-base ml-[11px]") Sayfa: #[strong 12-28]
+										span(class="text-base text-[#2a2c31] ml-[11px]") Sayfa: #[strong 12-28]
 									div(class="flex") 
 										span(class="flex justify-center items-center size-6.5 rounded-[13px] bg-[#f0f0f3]")
 											svg(
@@ -102,10 +107,10 @@ section(class="mb-[180px]")
 													d="M12.8235 5.45294L13.8257 4.45074C14.1797 4.09674 14.375 3.62585 14.375 3.12506C14.375 2.62427 14.1797 2.15338 13.8257 1.79938C13.0945 1.06818 11.9055 1.06818 11.1743 1.79938L7.97337 5.00006H3.75C2.02698 5.00006 0.625 6.40204 0.625 8.12506V10.6251C0.625 12.3481 2.02698 13.7501 3.75 13.7501H11.25C12.973 13.7501 14.375 12.3481 14.375 10.6251V8.12506C14.375 6.97985 13.7463 5.99368 12.8235 5.45294ZM12.0581 2.68317C12.1802 2.5614 12.3401 2.50037 12.5 2.50037C12.6599 2.50037 12.8198 2.5614 12.9419 2.68347C13.0603 2.80127 13.125 2.95813 13.125 3.12506C13.125 3.29199 13.0603 3.44885 12.9419 3.56665L9.3866 7.12195C9.28955 7.2193 9.16138 7.28217 9.02466 7.29987L8.22266 7.40241L8.32581 6.59949C8.3429 6.46368 8.40576 6.33521 8.50342 6.23785L12.0581 2.68317ZM13.125 10.6251C13.125 11.659 12.2839 12.5001 11.25 12.5001H3.75C2.71606 12.5001 1.875 11.659 1.875 10.6251V8.12506C1.875 7.09113 2.71606 6.25006 3.75 6.25006H7.12639C7.11132 6.31365 7.09381 6.37671 7.08557 6.44171L6.87988 8.04572C6.85547 8.23767 6.92139 8.43024 7.0581 8.56696C7.1759 8.68506 7.3352 8.75006 7.5 8.75006C7.52624 8.75006 7.5531 8.74854 7.57935 8.74487L9.18335 8.53949C9.59289 8.48731 9.97925 8.29749 10.271 8.00543L11.8955 6.38094C12.61 6.6442 13.125 7.31989 13.125 8.12506L13.125 10.6251ZM11.25 10.6251C11.25 10.9702 10.9705 11.2501 10.625 11.2501H4.375C4.02954 11.2501 3.75 10.9702 3.75 10.6251C3.75 10.2799 4.02954 10.0001 4.375 10.0001H10.625C10.9705 10.0001 11.25 10.2799 11.25 10.6251ZM3.75 8.12506C3.75 7.77991 4.02954 7.50006 4.375 7.50006H5C5.34546 7.50006 5.625 7.77991 5.625 8.12506C5.625 8.47022 5.34546 8.75006 5 8.75006H4.375C4.02954 8.75006 3.75 8.47022 3.75 8.12506Z"
 													fill="#2A2C31")
 
-										span(class="text-base ml-[11px]") Elif Başkaya Acar, Emre Taran, Halil Başar
+										span(class="text-base text-[#2a2c31] ml-[11px]") Elif Başkaya Acar, Emre Taran, Halil Başar
 
-							//- Right Content
-							.content-right(class="flex justify-center lg:justify-end lg:w-2/5 space-x-[7px] [&_a_span.text]:hidden lg:[&_a_span.text]:inline-block") 
+							//- Right Content (Buttons)
+							.content-right(class="flex justify-center lg:justify-end lg:w-3/10 space-x-[7px] mb-5 [&_a_span.text]:hidden lg:[&_a_span.text]:inline-block") 
 
 								+buttonGeneral("", {
 									href: "javascript:;", 

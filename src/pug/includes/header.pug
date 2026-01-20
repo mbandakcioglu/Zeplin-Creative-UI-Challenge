@@ -1,11 +1,13 @@
 header.header(class="xl:shadow-[inset_0_44px_0_0_#112053]")
 	.container-fluid(class="xl:h-33.75 flex w-full justify-between items-center")
+		//- .header-logo(
+			class=`flex justify-center items-center xl:w-[381px] w-1/2 xl:h-33.75 h-17.5 xl:pl-8 xl:pr-16.5 px-4 xl:mr-5 xl:rounded-tr-[100px] bg-[#273d89] border xl:border-black xl:shadow-[21px_-21px_0_0_#ffffff] shadow-0` )
 		.header-logo(
-			class=`flex justify-center items-center xl:w-95.25 w-1/2 xl:h-33.75 h-17.5 xl:pl-8 xl:pr-16.5 px-4 xl:mr-5 xl:rounded-tr-[100px] bg-[#273d89] border xl:border-black xl:shadow-[21px_-21px_0_0_#ffffff] shadow-0` 
+			class="flex justify-center items-center w-[381px] h-33.75 rounded-tr-[100px] bg-[#273d89] border xl:border-black xl:shadow-[21px_-21px_0_0_#ffffff] shadow-0"
 		)
-			a(href="javascript:;") 
-				img(class="w-full object-cover", src=images + "/header/logo.svg", alt="")
-		div(class="flex flex-col w-full") 
+			a(class="inline-flex ml-5 lg:ml-0", href="javascript:;") 
+				img(class="w-[80%] md:w-[283px] md:h-[91px] object-cover", src=images + "/header/logo.svg", alt="")
+		div(class="flex flex-col md:w-[calc(100%-381px)] pl-5") 
 			.header-top(class="hidden h-11 xl:flex items-center justify-between text-white text-[17px]")
 				a.header__item(class="leading-7 mr-auto flex gap-[14px]", href="mailto:profuture@gmail.com") 
 					img(src= images + "/icons/icon-mail.svg", alt="") 
@@ -29,7 +31,7 @@ header.header(class="xl:shadow-[inset_0_44px_0_0_#112053]")
 				
 				a(href="javascript:;", class="xl:mr-auto")
 					img(src=images + "/icons/icon-home.svg", alt="")
-				ul(class="flex flex-col xl:flex-row gap-[25px] mr-[25px] [&>li>a]:py-0.5 [&>li>a]:transition-shadow [&>li>a]:duration-300 [&>li>a]:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.3)] lg:text-[14px] 2xl:text-[18px]")
+				ul(class="flex flex-col xl:flex-row gap-[25px] mr-[25px] [&>li>a]:py-1 [&>li>a]:transition-shadow [&>li>a]:duration-300 [&>li>a]:hover:shadow-[inset_0_-2px_0_0_rgba(0,0,0,0.3)] lg:text-[14px] 2xl:text-[18px]")
 					li 
 						a.header__item(class="", href="/") Amaç ve Kapsam
 					li 
