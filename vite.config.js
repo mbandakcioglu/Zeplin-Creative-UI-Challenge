@@ -25,13 +25,11 @@ const projectSetup = {
 // app.js dışında, bundle'a eklenmeden dist'e kopyalanacak script dosyaları
 const standaloneScripts = [
 	// ör: "src/scripts/slider.js",
-
 ];
 
 // app.css dışında, bundle'a eklenmeden dist'e kopyalanacak css dosyaları
 const standaloneStyles = [
 	// ör: "src/styles/pages/contact.css",
-
 ];
 
 const assetsPath =
